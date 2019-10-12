@@ -1,0 +1,35 @@
+package comm.dhee.controller;
+
+import java.sql.SQLException;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import comm.dhee.dao.M003Controller;
+import comm.dhee.dto.M003;
+
+@Controller
+public class LoginController {
+
+	@RequestMapping("tologin.action")
+	public String toLogin() {
+		return "login";
+	}
+
+	@RequestMapping("/login.action")
+	public String login(@ModelAttribute M003 m003) throws SQLException {
+
+		m003.setM00304("00" + m003.getM00304());
+
+		M003 nM003 = new M003();
+		nM003 = M003Controller.login(m003);
+		if (nM003.getM00301() == null) {
+			return "error";
+		} else {
+			return "PR10101";
+		}
+	}
+}

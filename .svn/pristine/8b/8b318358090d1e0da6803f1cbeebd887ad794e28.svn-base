@@ -1,0 +1,42 @@
+package comm.dhee.dto;
+
+public class M003 {
+
+	private String M00301;
+	private String M00302;
+	private String M00303;
+	private String M00304;
+
+	public String getM00301() {
+		return M00301;
+	}
+
+	public void setM00301(String m00301) {
+		M00301 = m00301;
+	}
+
+	public String getM00302() {
+		return M00302;
+	}
+
+	public void setM00302(String m00302) {
+		M00302 = m00302;
+	}
+
+	public String getM00303() {
+		return M00303;
+	}
+
+	public void setM00303(String m00303) {
+		M00303 = m00303;
+	}
+
+	public String getM00304() {
+		return M00304;
+	}
+
+	public void setM00304(String m00304) {
+		M00304 = m00304;
+	}
+
+}
